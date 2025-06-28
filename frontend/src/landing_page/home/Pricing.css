@@ -1,0 +1,16 @@
+@media (min-width: 400px) {
+    .pricing-block-div {
+        display: flex;
+        justify-content: space-around;
+        max-width: 100%;
+    }
+}
+
+.pricing-block img {
+    height: 80px;
+}
+
+.pricing-block p {
+    font-size: 14px;
+    margin-top: 0.5rem;
+}
