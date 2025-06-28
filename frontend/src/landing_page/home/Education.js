@@ -19,9 +19,12 @@ function Eduction() {
               Varsity, the largest online stock market education book in the
               world covering everything from the basics to advanced trading.
             </p>
-            <a href="#" style={{ textDecoration: "none" }}>
+            <a href="#" style={{ textDecoration: "none", color: "#387ed1" }}>
               Varsity&nbsp;
-              <i class="fa-solid fa-arrow-right-long"></i>
+              <i
+                class="fa-solid fa-arrow-right-long"
+                style={{ color: "#387ed1" }}
+              ></i>
             </a>
           </div>
 
@@ -30,9 +33,12 @@ function Eduction() {
               TradingQ&A, the most active trading and investment community in
               India for all your market related queries.
             </p>
-            <a href="#" style={{ textDecoration: "none" }}>
+            <a href="#" style={{ textDecoration: "none", color: "#387ed1" }}>
               TradingQ&A&nbsp;
-              <i class="fa-solid fa-arrow-right-long"></i>
+              <i
+                class="fa-solid fa-arrow-right-long"
+                style={{ color: "#387ed1" }}
+              ></i>
             </a>
           </div>
         </div>

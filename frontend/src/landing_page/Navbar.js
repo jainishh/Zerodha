@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-light border-bottom ">
       <div className="container p-2">
-        <a className="navbar-brand mx-5" href="#">
+        <a className="navbar-brand" href="#">
           <img
             src="media\images\logo.svg"
             alt="logo"
@@ -25,10 +25,10 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="collapse navbar-collapse justify-content-center ml-5"
+          className="collapse navbar-collapse justify-content-center"
           id="navbarSupportedContent"
         >
-          <ul className="navbar-nav text-center">
+          <ul className="navbar-nav text-center gap-2">
             <li className="nav-item first">
               <a className="nav-link" aria-current="page" href="#">
                 Signup

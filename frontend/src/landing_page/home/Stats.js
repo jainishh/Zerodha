@@ -41,12 +41,23 @@ function Stats() {
             style={{ width: "100%" }}
           />
           <div className="text-center">
-            <a href="#" className="mx-3" style={{ textDecoration: "none" }}>
+            <a
+              href="#"
+              className="mx-3"
+              style={{ textDecoration: "none", color: "#387ed1" }}
+            >
               Explore our products&nbsp;
-              <i class="fa-solid fa-arrow-right-long"></i>
+              <i
+                class="fa-solid fa-arrow-right-long"
+                style={{ color: "#387ed1" }}
+              ></i>
             </a>
-            <a href="#" style={{ textDecoration: "none" }}>
-              Try Kite demo&nbsp;<i class="fa-solid fa-arrow-right-long"></i>
+            <a href="#" style={{ textDecoration: "none", color: "#387ed1" }}>
+              Try Kite demo&nbsp;
+              <i
+                class="fa-solid fa-arrow-right-long"
+                style={{ color: "#387ed1" }}
+              ></i>
             </a>
           </div>
         </div>

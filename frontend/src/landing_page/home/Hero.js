@@ -19,7 +19,10 @@ function Hero() {
           </p>
         </div>
         <div className="col-12 mt-3">
-          <button className="btn btn-primary fs-5 px-4 py-2 ">
+          <button
+            className="btn btn-primary fs-5 px-4 py-2 "
+            style={{ backgroundColor: "#387ed1" }}
+          >
             Sign up for free
           </button>
         </div>
