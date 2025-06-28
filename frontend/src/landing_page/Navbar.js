@@ -29,7 +29,7 @@ function Navbar() {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav text-center gap-2">
-            <li className="nav-item first">
+            <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#">
                 Signup
               </a>
