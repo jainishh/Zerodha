@@ -1,17 +1,18 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-light border-bottom ">
       <div className="container p-2">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img
             src="media\images\logo.svg"
             alt="logo"
             style={{ width: "140px" }}
           />
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -30,29 +31,29 @@ function Navbar() {
         >
           <ul className="navbar-nav text-center gap-2">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
+              <Link className="nav-link" aria-current="page" to="/signup">
                 Signup
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/products">
                 Poducts
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="pricing">
                 Pricing
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="support">
                 Support
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

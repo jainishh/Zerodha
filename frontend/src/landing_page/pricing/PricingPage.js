@@ -7,10 +7,8 @@ import Brokerage from "./Brokerage";
 function Pricing() {
   return (
     <>
-      <Navbar />
       <Hero />
       <Brokerage />
-      <Footer />
     </>
   );
 }
