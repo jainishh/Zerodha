@@ -12,8 +12,8 @@ function Hero() {
           />
         </div>
         <div className="col-12 mt-4">
-          <h1>Invest in everything</h1>
-          <p className="mt-3">
+          <h1 style={{ color: "#424242" }}>Invest in everything</h1>
+          <p className="mt-3" style={{ fontSize: "1.1em", color: "#424242" }}>
             Online platform to invest in stocks, derivatives, mutual funds,
             ETFs, bonds, and more.
           </p>
@@ -21,7 +21,7 @@ function Hero() {
         <div className="col-12 mt-3">
           <button
             className="btn btn-primary fs-5 px-4 py-2 "
-            style={{ backgroundColor: "#387ed1" }}
+            style={{ backgroundColor: "#387ed1", fontWeight: "500" }}
           >
             Sign up for free
           </button>

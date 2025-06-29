@@ -31,27 +31,48 @@ function Navbar() {
         >
           <ul className="navbar-nav text-center gap-2">
             <li className="nav-item">
-              <Link className="nav-link" aria-current="page" to="/signup">
+              <Link
+                className="nav-link"
+                aria-current="page"
+                to="/signup"
+                style={{ fontWeight: "500", color: "#666666" }}
+              >
                 Signup
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <Link
+                className="nav-link"
+                to="/about"
+                style={{ fontWeight: "500", color: "#666666" }}
+              >
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/products">
+              <Link
+                className="nav-link"
+                to="/products"
+                style={{ fontWeight: "500", color: "#666666" }}
+              >
                 Poducts
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="pricing">
+              <Link
+                className="nav-link"
+                to="pricing"
+                style={{ fontWeight: "500", color: "#666666" }}
+              >
                 Pricing
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="support">
+              <Link
+                className="nav-link"
+                to="support"
+                style={{ fontWeight: "500", color: "#666666" }}
+              >
                 Support
               </Link>
             </li>

@@ -1,12 +1,13 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer>
       <div className="container mt-5 border-top">
         <div className="row p-4">
-          <div className="col-12 col-md-3 py-5">
+          <div className="col-12 col-md-3 py-5 text-muted">
             <img
               src="media/images/logo.svg"
               alt="Logo"
@@ -30,7 +31,7 @@ function Footer() {
             </span>
           </div>
           <div className="link col-12 col-md-2 py-5">
-            <h5>Account</h5>
+            <h5 style={{ color: "#424242" }}>Account</h5>
             <a href="#">Referral program</a>
             <br></br>
             <a href="#">Minor demat account</a>
@@ -49,7 +50,7 @@ function Footer() {
             <br></br>
           </div>
           <div className="link col-12 col-md-2 py-5">
-            <h5>Support</h5>
+            <h5 style={{ color: "#424242" }}>Support</h5>
             <a href="#">Contact us</a>
             <br></br>
             <a href="#">How to file a complaint?</a>
@@ -68,7 +69,7 @@ function Footer() {
             <br></br>
           </div>
           <div className="link col-12 col-md-2 py-5">
-            <h5>Company</h5>
+            <h5 style={{ color: "#424242" }}>Company</h5>
             <a href="#">About</a>
             <br></br>
             <a href="#">Philosophy</a>
@@ -85,7 +86,7 @@ function Footer() {
             <br></br>
           </div>
           <div className="link col-12 col-md-2 py-5">
-            <h5>Quick links</h5>
+            <h5 style={{ color: "#424242" }}>Quick links</h5>
             <a href="#">Upcoming IPOs</a>
             <br></br>
             <a href="#">Brokerage charges</a>
@@ -114,16 +115,35 @@ function Footer() {
               Registered Address: Zerodha Broking Ltd., #153/154, 4th Cross,
               Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase,
               Bengaluru - 560078, Karnataka, India. For any complaints
-              pertaining to securities broking please write to
-              complaints@zerodha.com, for DP related to dp@zerodha.com. Please
-              ensure you carefully read the Risk Disclosure Document as
+              pertaining to securities broking please write to{" "}
+              <Link
+                to={"#"}
+                style={{ textDecoration: "none", color: "#387ED1" }}
+              >
+                complaints@zerodha.com
+              </Link>
+              , for DP related to{" "}
+              <Link
+                to={"#"}
+                style={{ textDecoration: "none", color: "#387ED1" }}
+              >
+                dp@zerodha.com
+              </Link>
+              . Please ensure you carefully read the Risk Disclosure Document as
               prescribed by SEBI | ICF
             </p>
             <p className="footer-para">
-              Procedure to file a complaint on SEBI SCORES: Register on SCORES
-              portal. Mandatory details for filing complaints on SCORES: Name,
-              PAN, Address, Mobile Number, E-mail ID. Benefits: Effective
-              Communication, Speedy redressal of the grievances
+              Procedure to file a complaint on{" "}
+              <Link
+                to={"#"}
+                style={{ textDecoration: "none", color: "#387ED1" }}
+              >
+                SEBI SCORES
+              </Link>
+              : Register on SCORES portal. Mandatory details for filing
+              complaints on SCORES: Name, PAN, Address, Mobile Number, E-mail
+              ID. Benefits: Effective Communication, Speedy redressal of the
+              grievances
             </p>
             <p className="footer-para">
               Investments in securities market are subject to market risks; read
@@ -154,7 +174,13 @@ function Footer() {
               in your bank account. As a business we don't give stock tips, and
               have not authorized anyone to trade on behalf of others. If you
               find anyone claiming to be part of Zerodha and offering such
-              services, please create a ticket here.
+              services, please{" "}
+              <Link
+                to={"#"}
+                style={{ textDecoration: "none", color: "#387ED1" }}
+              >
+                create a ticket here.
+              </Link>
             </p>
           </div>
         </div>

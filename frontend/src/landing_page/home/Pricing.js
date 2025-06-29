@@ -6,13 +6,23 @@ function Pricing() {
     <div className="container">
       <div className="row p-4 align-items-center">
         <div className="col-12 col-md-6 py-5">
-          <h2 className="mb-4">Unbeatable pricing</h2>
-          <p>
+          <h2 className="mb-4" style={{ color: "#424242" }}>
+            Unbeatable pricing
+          </h2>
+          <p style={{ fontSize: "1.1em", color: "#424242" }}>
             We pioneered the concept of discount broking and price transparency
             in India. Flat fees and no hidden charges.
           </p>
           <div>
-            <a href="#" style={{ textDecoration: "none", color: "#387ed1" }}>
+            <a
+              href="#"
+              style={{
+                textDecoration: "none",
+                color: "#387ed1",
+                fontSize: "1.1em",
+                fontWeight: "500",
+              }}
+            >
               See pricing&nbsp;
               <i
                 class="fa-solid fa-arrow-right-long"
