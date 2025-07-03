@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Hero.css";
 
 function Hero() {
   return (
@@ -19,7 +20,7 @@ function Hero() {
         className="row border-top p-5 mt-5 text-muted d-flex justify-content-around"
         style={{ lineHeight: "1.8", fontSize: "1.1em" }}
       >
-        <div className="col-12 col-md-6 p-5">
+        <div className="col-12 col-md-6 hero-para">
           <p>
             We kick-started operations on the 15th of August, 2010 with the goal
             of breaking all barriers that traders and investors face in India in
@@ -37,7 +38,7 @@ function Hero() {
             15% of all Indian retail trading volumes
           </p>
         </div>
-        <div className="col-12 col-md-6 p-5">
+        <div className="col-12 col-md-6 hero-para">
           <p>
             In addition, we run a number of popular open online educational and
             community initiatives to empower retail traders and investors.

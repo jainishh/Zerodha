@@ -1,0 +1,21 @@
+.heading-people {
+  font-size: 2rem;
+  color: #424242;
+}
+
+.ceo-image {
+  border-radius: 50%;
+  width: 60%;
+  max-width: 300px;
+}
+
+.ceo-image-div {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.ceo-pera {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #424242;
+}

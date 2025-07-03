@@ -35,7 +35,7 @@ function Pricing() {
         <div className="col-12 col-md-6 col-sm-12 pricing-block-div ">
           <div className="text-center pricing-block">
             <img src="media/images/pricing0.svg" alt="Free account opening" />
-            <p>
+            <p style={{ color: "#666666" }}>
               Free account
               <br />
               opening
@@ -43,7 +43,7 @@ function Pricing() {
           </div>
           <div className="text-center pricing-block">
             <img src="media/images/pricing0.svg" alt="Free equity delivery" />
-            <p>
+            <p style={{ color: "#666666" }}>
               Free equity delivery
               <br />
               and direct mutual funds
@@ -51,7 +51,7 @@ function Pricing() {
           </div>
           <div className="text-center pricing-block">
             <img src="media/images/pricing20.svg" alt="Intraday and F&O" />
-            <p>
+            <p style={{ color: "#666666" }}>
               Intraday and
               <br />
               F&amp;O

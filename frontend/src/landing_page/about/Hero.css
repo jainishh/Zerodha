@@ -1,0 +1,9 @@
+.hero-para {
+  padding: 3rem;
+}
+
+@media (max-width: 768px) {
+  .hero-para {
+    padding: 0rem;
+  }
+}
