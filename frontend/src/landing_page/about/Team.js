@@ -1,6 +1,7 @@
 import React from "react";
 import "./Team.css";
 import { Link } from "react-router-dom";
+import TeamMember from "./TeamMember";
 
 function Team() {
   return (
@@ -29,7 +30,6 @@ function Team() {
             </h4>
             <p
               style={{
-                fontSize: "0.9rem",
                 color: "#666666",
                 fontWeight: "440",
               }}
@@ -65,6 +65,7 @@ function Team() {
           </p>
         </div>
       </div>
+      <TeamMember className="teamMembers" />
     </div>
   );
 }

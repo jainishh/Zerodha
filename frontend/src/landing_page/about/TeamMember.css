@@ -1,0 +1,64 @@
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px;
+}
+.member-info {
+  width: 22em;
+  text-align: center;
+  padding: 2em;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #666666;
+}
+.toggle-button:hover {
+  color: rgba(2, 2, 246, 0.462);
+}
+
+.member-image {
+  border-radius: 50%;
+  width: 85%;
+}
+
+.teamMembers {
+  transition: margin-bottom 0.3s ease;
+}
+
+/* Add spacing only when bio is visible */
+.setMargin {
+  margin-bottom: 40px;
+}
+
+.member-bio {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.member-bio-show {
+  max-height: 300px; /* Set based on expected content height */
+  opacity: 1;
+}
+
+.fa-chevron-down {
+  font-size: 12px;
+}
+.fa-chevron-up {
+  font-size: 12px;
+}
+.member-name {
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #424242;
+}
+
+.member-roll {
+  color: #666666;
+}
