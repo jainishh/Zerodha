@@ -50,7 +50,7 @@ function LeftSection({
 
             <div>
               <a
-                href="#"
+                href={tryDemo}
                 style={{
                   textDecoration: "none",
                   color: "#387ed1",
@@ -66,7 +66,7 @@ function LeftSection({
                 ></i>
               </a>
               <a
-                href="#"
+                href={learnMore}
                 style={{
                   textDecoration: "none",
                   color: "#387ed1",

@@ -9,10 +9,7 @@ function ProductsPage() {
     <>
       <Hero />
       <div className="justify-content-cente">
-        <div
-          className="border-top"
-          style={{ width: "1200px", marginLeft: "10%" }}
-        ></div>
+        <div className="border-top topborder"></div>
       </div>
 
       <LeftSection
