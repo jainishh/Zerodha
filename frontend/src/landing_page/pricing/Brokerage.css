@@ -1,0 +1,23 @@
+.tablename {
+  color: #424242;
+}
+
+th {
+  color: #424242 !important;
+}
+
+td {
+  color: #424242 !important;
+}
+
+.heading {
+  color: #424242;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.pera {
+  color: #424242;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}

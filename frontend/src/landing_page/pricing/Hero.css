@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+  .herotopdiv {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroimgdiv {
+    padding: 30px 20px !important;
+  }
+}
