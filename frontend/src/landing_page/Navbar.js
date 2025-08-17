@@ -3,12 +3,22 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  // Function to close navbar after click
+  const closeNavbar = () => {
+    const navbar = document.getElementById("navbarSupportedContent");
+    if (navbar && navbar.classList.contains("show")) {
+      // Bootstrap collapse class
+      const collapse = window.bootstrap.Collapse.getInstance(navbar);
+      collapse.hide();
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-light border-bottom ">
       <div className="container p-2">
         <Link className="navbar-brand" to="/">
           <img
-            src="media\images\logo.svg"
+            src="media/images/logo.svg"
             alt="logo"
             style={{ width: "140px" }}
           />
@@ -25,6 +35,7 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <div
           className="collapse navbar-collapse justify-content-center"
           id="navbarSupportedContent"
@@ -33,8 +44,8 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 className="nav-link"
-                aria-current="page"
                 to="/signup"
+                onClick={closeNavbar}
                 style={{ fontWeight: "500", color: "#666666" }}
               >
                 Signup
@@ -44,6 +55,7 @@ function Navbar() {
               <Link
                 className="nav-link"
                 to="/about"
+                onClick={closeNavbar}
                 style={{ fontWeight: "500", color: "#666666" }}
               >
                 About
@@ -53,15 +65,17 @@ function Navbar() {
               <Link
                 className="nav-link"
                 to="/products"
+                onClick={closeNavbar}
                 style={{ fontWeight: "500", color: "#666666" }}
               >
-                Poducts
+                Products
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 className="nav-link"
-                to="pricing"
+                to="/pricing"
+                onClick={closeNavbar}
                 style={{ fontWeight: "500", color: "#666666" }}
               >
                 Pricing
@@ -70,7 +84,8 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 className="nav-link"
-                to="support"
+                to="/support"
+                onClick={closeNavbar}
                 style={{ fontWeight: "500", color: "#666666" }}
               >
                 Support
