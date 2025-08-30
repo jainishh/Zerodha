@@ -1,0 +1,32 @@
+.watchlist,
+.dashboard {
+  height: 100vh !important;
+}
+
+.content {
+  overflow-x: hidden;
+}
+
+.topbar,
+.watchlist {
+  width: 30% !important;
+  padding: 0 !important;
+}
+
+.menu,
+.dashboard {
+  width: 70% !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .menu,
+  .dashboard {
+    width: 100% !important;
+  }
+  .topbar,
+  .watchlist {
+    width: 0% !important;
+    display: none !important;
+  }
+}

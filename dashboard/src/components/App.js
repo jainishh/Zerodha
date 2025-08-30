@@ -1,7 +1,13 @@
 import React from "react";
+import Allroutes from "./Allroutes";
+import Home from "./Home";
 
-const Home = () => {
-  return <h1>Home</h1>;
+const App = () => {
+  return (
+    <div>
+      <Allroutes></Allroutes>
+    </div>
+  );
 };
 
-export default Home;
+export default App;
