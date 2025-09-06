@@ -1,5 +1,12 @@
 .topcontainer {
   border: 1px solid rgba(186, 182, 182, 0.66);
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30%;
+  z-index: 1000;
+  background: #fafbfc;
 }
 
 .insidecontainer {

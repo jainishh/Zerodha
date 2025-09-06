@@ -9,15 +9,17 @@ import Positions from "./Positions";
 
 const Allroutes = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/orders" element={<Orders />} />
-        <Route path="/holdings" element={<Holdings />} />
-        <Route path="/positions" element={<Positions />} />
-      </Routes>
-    </div>
+    <Routes>
+      {/* Parent Layout */}
+      <Route path="/" element={<Home />}>
+        {/* Nested Routes appear in <Outlet /> */}
+        <Route index element={<Dashboard />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="orders" element={<Orders />} />
+        <Route path="holdings" element={<Holdings />} />
+        <Route path="positions" element={<Positions />} />
+      </Route>
+    </Routes>
   );
 };
 

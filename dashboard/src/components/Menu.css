@@ -20,6 +20,18 @@ img {
   box-shadow: 0 0.1rem 1rem rgba(179, 177, 177, 0.15);
   height: 49.6px; /* fixed height for navbar */
   padding: 0 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 70%;
+  z-index: 1000;
+  background: #fafbfc;
+}
+
+@media (max-width: 768px) {
+  .menuContainer {
+    width: 100%;
+  }
 }
 
 .menus ul {
