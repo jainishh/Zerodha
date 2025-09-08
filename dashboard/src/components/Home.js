@@ -20,12 +20,12 @@ const Home = () => {
 
       {/* Row 2 */}
       <div className="row">
-        <div className="watchlist" style={{ height: "50px" }}>
+        <div className="watchlist">
           <WatchList />
         </div>
 
         {/* This will change depending on route */}
-        <div className="outlet" style={{ height: "50px" }}>
+        <div className="outlet">
           <Outlet />
         </div>
       </div>

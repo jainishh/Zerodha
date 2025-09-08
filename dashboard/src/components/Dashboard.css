@@ -1,0 +1,143 @@
+.DashboardContainer {
+  padding: 1rem;
+  max-width: 950px;
+  margin: 0 auto;
+  margin-top: 1em;
+  height: 900px;
+}
+
+/* Mobile Screen */
+@media (max-width: 768px) {
+  .DashboardContainer {
+    padding: 3rem;
+    height: 1500px;
+  }
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background: #5f5757;
+  margin-top: 0.5rem;
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.card {
+  flex: 1 1 300px;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(60, 60, 60, 0.15);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cardHeader h4 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.cardBody {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.left {
+  flex: 1;
+  min-width: 100px;
+}
+
+.left h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.left p {
+  margin: 0.25rem 0 0;
+  color: #6c757d;
+}
+
+.right {
+  flex: 1;
+  min-width: 120px;
+}
+
+.right p {
+  margin: 0.25rem 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.right a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #387ed1;
+  text-decoration: none;
+}
+
+.buttonDash {
+  background-color: #387ed1 !important;
+}
+
+.right a:hover {
+  text-decoration: underline;
+}
+
+.dividerVertical {
+  width: 1px;
+  background: #e0e0e0;
+  height: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cardsWrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dividerVertical {
+    display: none;
+  }
+}
+
+.investmentKit {
+  margin: 0 auto;
+  margin-top: 3em;
+  text-align: center;
+}
+
+.investmentKit i {
+  font-size: 5em;
+  padding: 40px;
+}

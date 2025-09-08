@@ -169,3 +169,17 @@ export const positions = [
     isLoss: true,
   },
 ];
+
+const ordersData = [
+  { name: "TCS", qty: 10, price: 3500, mode: "CNC" },
+  { name: "INFY", qty: 5, price: 1500, mode: "MIS" },
+  { name: "RELIANCE", qty: 2, price: 2500, mode: "CNC" },
+  { name: "TCS", qty: 10, price: 3500, mode: "CNC" },
+  { name: "INFY", qty: 5, price: 1500, mode: "MIS" },
+  { name: "RELIANCE", qty: 2, price: 2500, mode: "CNC" },
+  { name: "TCS", qty: 10, price: 3500, mode: "CNC" },
+  { name: "INFY", qty: 5, price: 1500, mode: "MIS" },
+  { name: "RELIANCE", qty: 2, price: 2500.3455677, mode: "CNC" },
+];
+
+export default ordersData;

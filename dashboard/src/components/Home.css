@@ -13,10 +13,19 @@
   padding: 0 !important;
 }
 
+/* .watchlist {
+  margin-right: 1px;
+} */
+
 .menu,
 .outlet {
   width: 70% !important;
   padding: 0 !important;
+}
+
+.outlet {
+  overflow: scroll;
+  border: 1px solid rgba(186, 182, 182, 0.66);
 }
 
 @media (max-width: 768px) {
@@ -25,7 +34,7 @@
     width: 100% !important;
   }
   .topbar,
-  .outlet {
+  .watchlist {
     width: 0% !important;
     display: none !important;
   }
