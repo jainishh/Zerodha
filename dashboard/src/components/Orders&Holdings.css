@@ -105,3 +105,19 @@
 .row .col:last-child h5 {
   color: rgb(72, 194, 55);
 }
+
+.holding-invest-info {
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.col p {
+  color: rgb(145, 145, 145) !important;
+}
+
+/* Mobile Screen */
+@media (max-width: 768px) {
+  .containerHoldings {
+    padding: 0rem 1rem;
+  }
+}

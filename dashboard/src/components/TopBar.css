@@ -6,7 +6,7 @@
   top: 0;
   width: 30%;
   z-index: 1000;
-  background: #fafbfc;
+  /* background: #fafbfc; */
 }
 
 .insidecontainer {
@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  box-shadow: 0 0.1rem 1rem rgba(163, 162, 162, 0.15);
+  /* box-shadow: 0 0.1rem 1rem rgba(163, 162, 162, 0.15); */
   margin-top: 14px;
 }
 
