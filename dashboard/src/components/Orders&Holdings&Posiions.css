@@ -1,5 +1,5 @@
 .containerOrders {
-  padding: 1rem;
+  padding: 0rem 2rem;
 }
 
 /* Mobile Screen */
@@ -120,4 +120,9 @@
   .containerHoldings {
     padding: 0rem 1rem;
   }
+}
+
+.positionsCan,
+.containerHoldings {
+  padding: 0rem 2rem;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Orders&Holdings.css";
+import "./Orders&Holdings&Posiions.css";
 import { holdings } from "../data/data";
 
 const Holdings = () => {
