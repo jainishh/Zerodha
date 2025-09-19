@@ -6,6 +6,7 @@ import Dashboard from "./Dashboard";
 import Orders from "./Orders";
 import Holdings from "./Holdings";
 import Positions from "./Positions";
+import WatchList from "./WatchList";
 
 const Allroutes = () => {
   return (
@@ -18,6 +19,7 @@ const Allroutes = () => {
         <Route path="orders" element={<Orders />} />
         <Route path="holdings" element={<Holdings />} />
         <Route path="positions" element={<Positions />} />
+        <Route path="/watchlist" element={<WatchList />} />
       </Route>
     </Routes>
   );

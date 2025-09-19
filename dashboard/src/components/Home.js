@@ -10,7 +10,7 @@ const Home = () => {
     <div className="content">
       {/* Row 1 */}
       <div className="row">
-        <div className="topbar" style={{ height: "50px" }}>
+        <div className="topbar" style={{ height: "0px" }}>
           <TopBar />
         </div>
         <div className="menu" style={{ height: "50px" }}>

@@ -91,7 +91,7 @@ const Holdings = () => {
         </table>
       </div>
 
-      <div className="row holding-invest-info">
+      <div className="row holding-invest-info mb-5">
         <div className="col">
           <h5>{totals.investment.toFixed(2)}</h5>
           <p>Total investment</p>

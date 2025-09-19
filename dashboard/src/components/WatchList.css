@@ -1,6 +1,15 @@
+.watchlist {
+  border: 1px solid rgba(186, 182, 182, 0.66);
+}
+
 .containerW {
   overflow-y: auto;
-  position: fixed;
-  width: 30%;
+  position: relative;
+  /* width: 100%; */
   z-index: 1000;
+  float: left;
 }
+
+/* .watchlist {
+  margin-left: 2px;
+} */
