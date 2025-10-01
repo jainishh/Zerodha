@@ -13,3 +13,172 @@
 /* .watchlist {
   margin-left: 2px;
 } */
+
+.sidebarWatchlistContainer {
+  width: 30%;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  border: 1px solid rgba(207, 204, 204, 0.66);
+  box-shadow: 4em 1em 3rem rgba(125, 123, 123, 0.15);
+}
+.watchlistContainer {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  border: 1px solid rgba(207, 204, 204, 0.66);
+  box-shadow: 4em 1em 3rem rgba(125, 123, 123, 0.15);
+  /* margin-top: 2.2em; */
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  height: 2.7em;
+  border: 1px solid rgba(226, 221, 221, 0.66);
+  border-top: none;
+  overflow: hidden;
+  background-color: white;
+}
+
+.searchIcon {
+  padding: 0 10px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: none;
+}
+
+.search {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 0 10px;
+  height: 100%;
+}
+
+.searchbtn {
+  background-color: none;
+  border: none;
+}
+
+/* watchList List items---------------------------------------------- */
+
+.list {
+  list-style-type: none;
+  max-height: 100vh;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+.list li {
+  border-bottom: 0.8px solid rgb(235, 234, 234);
+  padding: 10px 10px 10px 12px;
+  position: relative;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.itemDown,
+.arrowDown,
+.price {
+  color: #df514c;
+}
+.itemUp,
+.arraowUp,
+.price {
+  color: rgb(75, 174, 75);
+}
+.itemInfo .percent {
+  color: #888;
+  font-weight: 500;
+}
+.count {
+  color: #888;
+  opacity: 0.8;
+  padding: 1em;
+}
+
+/* watchlist hover effect btns  --------------------------------------------------*/
+ul li:hover {
+  cursor: pointer;
+  background: rgb(243, 243, 243);
+}
+.action {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: auto;
+}
+.action span button {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.action .buybtn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #4184f3;
+}
+.action .sellbtn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ff5722;
+}
+.Deptbtn,
+.chartbtn,
+.deletebtn,
+.morebtn {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(146, 142, 142);
+}
+.chartbtn,
+.deletebtn,
+.morebtn {
+  padding: 5px;
+  width: 3em;
+}
+
+/* @media (max-width: 1117px) {
+  .sidebarWatchlistContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 1117px) {
+  .watchlistContainer {
+    display: none;
+  }
+} */
