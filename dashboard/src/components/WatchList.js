@@ -69,7 +69,7 @@ const WatchListItem = ({ stock }) => {
       onMouseLeave={() => setShowWatchlistActions(false)}
     >
       <div className="item">
-        <p className={stock.isDown ? "itemDown" : "itemUp"}>{stock.name}</p>
+        <p>{stock.name}</p>
         <div className="itemInfo">
           <span className="percent">{stock.percent}</span>
           {stock.isDown ? (
@@ -77,13 +77,15 @@ const WatchListItem = ({ stock }) => {
           ) : (
             <KeyboardArrowUp className="arrowUp" />
           )}
-          <span className="price">{stock.price}</span>
+          <span className={stock.isDown ? "itemDown" : "itemUp"}>
+            {stock.price}
+          </span>
         </div>
         {showWatchlistActions && (
           <WatchListAction
             uid={stock.name}
             stockPrice={stock.price}
-            stockQty={0}
+            stockQty={10}
           />
         )}
       </div>
@@ -161,6 +163,3 @@ const WatchListAction = ({ uid, stockPrice }) => {
     </span>
   );
 };
-
-
-// watchlist and oult no scroll no proble che ae solve krvano aetale pela ae karvano che bhai

@@ -94,13 +94,26 @@
   align-items: center;
 }
 
-.itemDown,
+/* .itemDown,
 .arrowDown,
 .price {
   color: #df514c;
 }
 .itemUp,
 .arraowUp,
+.price {
+  color: rgb(75, 174, 75);
+} */
+.itemDown,
+.arrowDown,
+.itemDown,
+.price {
+  color: #df514c;
+}
+
+.itemUp,
+.arrowUp,
+.itemUp,
 .price {
   color: rgb(75, 174, 75);
 }
