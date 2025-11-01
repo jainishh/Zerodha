@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from "react";
 import "./Orders&Holdings&Posiions.css";
-import positions from "../data/data.js";
+// import positions from "../data/data.js";
+import axios from "axios";
 
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
 
   useEffect(() => {
-    // Simulate fetching data locally
-    setAllPositions(positions);
+    axios
+      .get("http://localhost:3002/addPositions")
+
+      .then((res) => {
+        setAllPositions(res.data);
+      });
   }, []);
 
   return (
     <div className="positionsCan">
+      <h3 className="title mt-4" style={{ color: "#494949" }}>
+        Positions ({allPositions.length})
+      </h3>
       <div className="order-table">
         <table>
           <thead>
@@ -35,7 +43,7 @@ const Positions = () => {
 
               return (
                 <tr key={index}>
-                  <td>{stock.name}</td>
+                  <td>{stock.product}</td>
                   <td>{stock.instrument}</td>
                   <td>{stock.qty}</td>
                   <td>{stock.avg.toFixed(2)}</td>

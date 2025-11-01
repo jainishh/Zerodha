@@ -33,7 +33,7 @@ export const watchlist = [
   { name: "IOC", price: 161.3, percent: "-0.29%", isDown: true },
 ];
 
-export default watchlist;
+// export default watchlist;
 
 // holdings
 export const holdings = [
@@ -187,7 +187,7 @@ export const holdings = [
 export const positions = [
   {
     product: "CNC",
-    name: "EVEREADY",
+    instrument: "EVEREADY",
     qty: 2,
     avg: 316.27,
     price: 312.35,
@@ -197,7 +197,27 @@ export const positions = [
   },
   {
     product: "CNC",
-    name: "JUBLFOOD",
+    instrument: "JUBLFOOD",
+    qty: 1,
+    avg: 3124.75,
+    price: 3082.65,
+    net: "+10.04%",
+    day: "-1.35%",
+    isLoss: true,
+  },
+  {
+    product: "CNC",
+    instrument: "JUBLFOOD",
+    qty: 1,
+    avg: 3124.75,
+    price: 3082.65,
+    net: "+10.04%",
+    day: "-1.35%",
+    isLoss: true,
+  },
+  {
+    product: "CNC",
+    instrument: "JUBLFOOD",
     qty: 1,
     avg: 3124.75,
     price: 3082.65,
@@ -207,7 +227,7 @@ export const positions = [
   },
 ];
 
-// export default positions;
+export default positions;
 
 // const ordersData = [
 //   { name: "TCS", qty: 10, price: 3500, mode: "CNC" },

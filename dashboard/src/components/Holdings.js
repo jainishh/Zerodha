@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Orders&Holdings&Posiions.css";
-import { holdings } from "../data/data";
+// import { holdings } from "../data/data";
+import axios from "axios";
 
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
@@ -12,9 +13,14 @@ const Holdings = () => {
   });
 
   useEffect(() => {
-    setAllHoldings(holdings); //load local data
-    const allData = calculateData(holdings);
-    setTotals(allData);
+    axios
+      .get("http://localhost:3002/addHoldings")
+
+      .then((res) => {
+        setAllHoldings(res.data);
+        // const allData = calculateData(res.data);
+        // setTotals(allData);
+      });
   }, []);
 
   const calculateData = (holdings) => {
@@ -39,7 +45,9 @@ const Holdings = () => {
 
   return (
     <div className="containerHoldings">
-      {/* <h3 className="title">Holdings ({allHoldings.length})</h3> */}
+      <h3 className="title mt-4" style={{ color: "#494949" }}>
+        Holdings ({allHoldings.length})
+      </h3>
       <div className="order-table holdings-table">
         <table>
           <tr>
