@@ -18,8 +18,11 @@ const Holdings = () => {
 
       .then((res) => {
         setAllHoldings(res.data);
-        // const allData = calculateData(res.data);
-        // setTotals(allData);
+        const allData = calculateData(res.data);
+        setTotals(allData);
+      })
+      .catch((err) => {
+        console.error("Axios error:", err);
       });
   }, []);
 

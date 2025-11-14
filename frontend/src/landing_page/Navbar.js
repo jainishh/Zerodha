@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   // Function to close navbar after click
@@ -14,7 +14,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-light border-bottom ">
+    <nav className="navbar navbar-expand-lg bg-light border-bottom fixed-top">
       <div className="container p-2">
         <Link className="navbar-brand" to="/">
           <img
@@ -42,54 +42,54 @@ function Navbar() {
         >
           <ul className="navbar-nav text-center gap-2">
             <li className="nav-item">
-              <Link
-                className="nav-link"
+              <NavLink
+                className="nav-link custom-nav-link"
                 to="/signup"
                 onClick={closeNavbar}
                 style={{ fontWeight: "500", color: "#666666" }}
               >
                 Signup
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link"
+              <NavLink
+                className="nav-link custom-nav-link"
                 to="/about"
                 onClick={closeNavbar}
                 style={{ fontWeight: "500", color: "#666666" }}
               >
                 About
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link"
+              <NavLink
+                className="nav-link custom-nav-link"
                 to="/products"
                 onClick={closeNavbar}
                 style={{ fontWeight: "500", color: "#666666" }}
               >
                 Products
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link"
+              <NavLink
+                className="nav-link custom-nav-link"
                 to="/pricing"
                 onClick={closeNavbar}
                 style={{ fontWeight: "500", color: "#666666" }}
               >
                 Pricing
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link"
+              <NavLink
+                className="nav-link custom-nav-link"
                 to="/support"
                 onClick={closeNavbar}
                 style={{ fontWeight: "500", color: "#666666" }}
               >
                 Support
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

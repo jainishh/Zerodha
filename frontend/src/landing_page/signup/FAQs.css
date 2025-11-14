@@ -1,0 +1,44 @@
+@media (max-width: 600px) {
+  .support-main .container {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 16px;
+  }
+
+  .support-main .container > div {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  /* Accordion header and content */
+  .support-main .accordion-header,
+  .support-main .accordion-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .support-main .accordion-header {
+    font-size: 1rem;
+    padding: 14px 12px;
+  }
+
+  .support-main .accordion-content {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  /* Quick links table */
+  .support-main table td {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .support-main table {
+    max-width: 100%;
+  }
+
+  /* News/alert box */
+  .support-main .container > div:first-child {
+    margin-bottom: 16px;
+  }
+}

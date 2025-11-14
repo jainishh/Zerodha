@@ -5,7 +5,7 @@ function Hero() {
   return (
     <div className="container">
       <div
-        className="row p-4 text-center herotopdiv"
+        className="row text-center herotopdiv"
         style={{ marginTop: "100px", marginBottom: "100px" }}
       >
         <h1

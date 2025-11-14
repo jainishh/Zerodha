@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.3rem !important;
+    padding-right: 1.3rem !important;
+  }
+}

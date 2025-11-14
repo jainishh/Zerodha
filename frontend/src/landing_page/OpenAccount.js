@@ -5,8 +5,10 @@ function OpenAccount() {
     <div className="container">
       <div className="row justify-content-center text-center">
         <div className="col-12 mt-4">
-          <h1 style={{ color: "#424242" }}>Open a Zerodha account</h1>
-          <p className="mt-3" style={{ fontSize: "1.1em", color: "#424242" }}>
+          <h2 style={{ color: "#424242", fontSize: "30px" }}>
+            Open a Zerodha account
+          </h2>
+          <p className="mt-3" style={{ fontSize: "1.1em", color: "#666666" }}>
             Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and
             F&O trades.
           </p>

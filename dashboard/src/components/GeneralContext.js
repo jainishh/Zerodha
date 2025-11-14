@@ -10,6 +10,7 @@ const GeneralContext = React.createContext({
 });
 
 export const GeneralContextProvider = (props) => {
+  console.log("GeneralContextProvider");
   const [isBuyWindowOpen, setIsBuyWindowOpen] = useState(false);
   const [isSellWindowOpen, setIsSellWindowOpen] = useState(false);
   const [selectedStockUID, setSelectedStockUID] = useState("");
@@ -17,6 +18,7 @@ export const GeneralContextProvider = (props) => {
   const [selectedStockQty, setSelectedStockQty] = useState(0);
 
   const handleOpenBuyWindow = (uid, stockPrice) => {
+    console.log("buyhel");
     setIsBuyWindowOpen(true);
     setSelectedStockUID(uid);
     setSelectedStockPrice(stockPrice);
@@ -43,33 +45,36 @@ export const GeneralContextProvider = (props) => {
   };
 
   return (
-    <GeneralContext.Provider
-      value={{
-        openBuyWindow: handleOpenBuyWindow,
-        closeBuyWindow: handleCloseBuyWindow,
-        openSellWindow: handleOpenSellWindow,
-        closeSellWindow: handleCloseSellWindow,
-      }}
-    >
-      {props.children}
+    <>
+      console.log("1223")
+      <GeneralContext.Provider
+        value={{
+          openBuyWindow: handleOpenBuyWindow,
+          closeBuyWindow: handleCloseBuyWindow,
+          openSellWindow: handleOpenSellWindow,
+          closeSellWindow: handleCloseSellWindow,
+        }}
+      >
+        {props.children}
 
-      {/* Dummy popup components */}
-      {isBuyWindowOpen && (
-        <BuyActionWindow
-          uid={selectedStockUID}
-          stockPrice={selectedStockPrice}
-          onClose={handleCloseBuyWindow}
-        />
-      )}
-      {isSellWindowOpen && (
-        <SellActionWindow
-          uid={selectedStockUID}
-          stockPrice={selectedStockPrice}
-          stockQty={selectedStockQty}
-          onClose={handleCloseSellWindow}
-        />
-      )}
-    </GeneralContext.Provider>
+        {/* Dummy popup components */}
+        {isBuyWindowOpen && (
+          <BuyActionWindow
+            uid={selectedStockUID}
+            stockPrice={selectedStockPrice}
+            onClose={handleCloseBuyWindow}
+          />
+        )}
+        {isSellWindowOpen && (
+          <SellActionWindow
+            uid={selectedStockUID}
+            stockPrice={selectedStockPrice}
+            stockQty={selectedStockQty}
+            onClose={handleCloseSellWindow}
+          />
+        )}
+      </GeneralContext.Provider>
+    </>
   );
 };
 

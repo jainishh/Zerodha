@@ -12,7 +12,9 @@ function Hero() {
           />
         </div>
         <div className="col-12 mt-4">
-          <h1 style={{ color: "#424242" }}>Invest in everything</h1>
+          <h2 style={{ color: "#424242", fontSize: "30px" }}>
+            Invest in everything
+          </h2>
           <p className="mt-3" style={{ fontSize: "1.1em", color: "#424242" }}>
             Online platform to invest in stocks, derivatives, mutual funds,
             ETFs, bonds, and more.

@@ -51,7 +51,7 @@ function AccordionItem({ icon, title, children, expanded, onClick }) {
         >
           <i className={`fa ${icon}`}></i>
         </span>
-        <span style={{ fontWeight: 500 }}>{title}</span>
+        <span style={{ fontWeight: 500, color: "#424242" }}>{title}</span>
         <span style={{ marginLeft: "auto", color: "#387ed1" }}>
           <i className={`fa fa-chevron-${expanded ? "up" : "down"}`}></i>
         </span>

@@ -1,0 +1,11 @@
+.top {
+  margin-top: 5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
+@media (max-width: 768px) {
+  .top {
+    margin-top: 0rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+}

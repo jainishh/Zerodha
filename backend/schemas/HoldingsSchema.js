@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 const { Schema } = require("mongoose");
 
 const HoldingsSchema = new Schema({
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
   name: String,
   qty: Number,
   avg: Number,
@@ -11,3 +16,5 @@ const HoldingsSchema = new Schema({
 });
 
 module.exports = { HoldingsSchema };
+
+// aa userID no khatlo karvano che

@@ -7,13 +7,16 @@ import Orders from "./Orders";
 import Holdings from "./Holdings";
 import Positions from "./Positions";
 import WatchList from "./WatchList";
+import GeneralContext from "./GeneralContext";
 
 const Allroutes = () => {
   return (
     <Routes>
       {/* Parent Layout */}
+
       <Route path="/" element={<Home />}>
         {/* Nested Routes appear in <Outlet /> */}
+
         <Route index element={<Dashboard />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="orders" element={<Orders />} />

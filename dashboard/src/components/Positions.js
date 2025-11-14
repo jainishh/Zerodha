@@ -20,11 +20,10 @@ const Positions = () => {
       <h3 className="title mt-4" style={{ color: "#494949" }}>
         Positions ({allPositions.length})
       </h3>
-      <div className="order-table">
+      <div className="order-table mb-5">
         <table>
           <thead>
             <tr>
-              <th>Product</th>
               <th>Instrument</th>
               <th>Qty.</th>
               <th>Avg.</th>
@@ -43,8 +42,7 @@ const Positions = () => {
 
               return (
                 <tr key={index}>
-                  <td>{stock.product}</td>
-                  <td>{stock.instrument}</td>
+                  <td>{stock.name}</td>
                   <td>{stock.qty}</td>
                   <td>{stock.avg.toFixed(2)}</td>
                   <td>{stock.price.toFixed(2)}</td>

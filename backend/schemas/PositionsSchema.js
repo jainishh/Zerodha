@@ -2,8 +2,12 @@ const mongoose = require("mongoose");
 const { Schema } = require("mongoose");
 
 const PositionsSchema = new Schema({
-  product: String,
-  instrument: String,
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  name: String,
   qty: Number,
   avg: Number,
   price: Number,

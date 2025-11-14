@@ -13,9 +13,9 @@ function Awards() {
         </div>
 
         <div className="col-12 col-md-6 text-center text-md-start py-5">
-          <h1 className="mb-3" style={{ color: "#424242" }}>
+          <h2 className="mb-4" style={{ color: "#424242" }}>
             Largest stock broker in India
-          </h1>
+          </h2>
           <p className="mb-4" style={{ fontSize: "1.1em", color: "#424242" }}>
             2+ million Zerodha clients contribute to over 15% of all retail
             order volumes in India daily by trading and investing in:

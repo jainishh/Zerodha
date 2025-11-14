@@ -33,7 +33,7 @@ export const watchlist = [
   { name: "IOC", price: 161.3, percent: "-0.29%", isDown: true },
 ];
 
-// export default watchlist;
+export default watchlist;
 
 // holdings
 export const holdings = [
@@ -227,18 +227,18 @@ export const positions = [
   },
 ];
 
-export default positions;
+// export default positions;
 
-// const ordersData = [
-//   { name: "TCS", qty: 10, price: 3500, mode: "CNC" },
-//   { name: "INFY", qty: 5, price: 1500, mode: "MIS" },
-//   { name: "RELIANCE", qty: 2, price: 2500, mode: "CNC" },
-//   { name: "TCS", qty: 10, price: 3500, mode: "CNC" },
-//   { name: "INFY", qty: 5, price: 1500, mode: "MIS" },
-//   { name: "RELIANCE", qty: 2, price: 2500, mode: "CNC" },
-//   { name: "TCS", qty: 10, price: 3500, mode: "CNC" },
-//   { name: "INFY", qty: 5, price: 1500, mode: "MIS" },
-//   { name: "RELIANCE", qty: 2, price: 2500.3455677, mode: "CNC" },
-// ];
+const ordersData = [
+  { name: "TCS", qty: 10, price: 3500, mode: "CNC" },
+  { name: "INFY", qty: 5, price: 1500, mode: "MIS" },
+  { name: "RELIANCE", qty: 2, price: 2500, mode: "CNC" },
+  { name: "TCS", qty: 10, price: 3500, mode: "CNC" },
+  { name: "INFY", qty: 5, price: 1500, mode: "MIS" },
+  { name: "RELIANCE", qty: 2, price: 2500, mode: "CNC" },
+  { name: "TCS", qty: 10, price: 3500, mode: "CNC" },
+  { name: "INFY", qty: 5, price: 1500, mode: "MIS" },
+  { name: "RELIANCE", qty: 2, price: 2500.3455677, mode: "CNC" },
+];
 
 // export default ordersData;
