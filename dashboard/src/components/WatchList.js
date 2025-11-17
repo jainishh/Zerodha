@@ -605,7 +605,6 @@
 
 import React, { useState, useEffect } from "react";
 import "./WatchList.css";
-import watchlist from "../data/data.js";
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 import { Grow, Tooltip } from "@mui/material";
 import axios from "axios";
@@ -615,26 +614,28 @@ import SellActionWindow from "./SellActionWindow";
 const WatchList = ({ sidebar }) => {
   const [searchStock, setSearchStock] = useState("");
   const [listData, setListData] = useState([]);
+  const [originalList, setOriginalList] = useState([]);
   const [selectedStock, setSelectedStock] = useState(null);
   const [actionType, setActionType] = useState(null); // "buy" or "sell"
   const [holdings, setHoldings] = useState([]);
 
-  // ✅ Fetch holdings from backend
+  // 🟦 Fetch All Watchlist Items from Backend
   useEffect(() => {
     axios
-      .get("http://localhost:3002/addHoldings")
+      .get(`${process.env.REACT_APP_API_URL}/allLists`)
       .then((res) => {
-        setHoldings(res.data);
+        setListData(res.data);
+        setOriginalList(res.data);
       })
       .catch((err) => {
-        console.error("Error fetching holdings:", err);
+        console.error("Error fetching allLists:", err);
       });
   }, []);
 
   //  Load all watchlist data initially
-  useEffect(() => {
-    setListData(watchlist);
-  }, []);
+  // useEffect(() => {
+  //   setListData(watchlist);
+  // }, []);
 
   // 🔍 Handle Search
   const handleSearchChange = (e) => {
@@ -642,11 +643,11 @@ const WatchList = ({ sidebar }) => {
     setSearchStock(value);
 
     if (!value.trim()) {
-      setListData(watchlist);
+      setListData(originalList);
       return;
     }
 
-    const filtered = watchlist.filter((s) =>
+    const filtered = originalList.filter((s) =>
       s.name.toLowerCase().includes(value.toLowerCase())
     );
     setListData(filtered);
@@ -662,6 +663,18 @@ const WatchList = ({ sidebar }) => {
       setActionType("buy");
     }, 0);
   };
+
+  // ✅ Fetch holdings from backend
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/addHoldings`)
+      .then((res) => {
+        setHoldings(res.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching holdings:", err);
+      });
+  }, []);
 
   // 💸 Open Sell Window (check if in holdings first)
   const handleSellClick = (stock) => {

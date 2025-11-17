@@ -1,6 +1,4 @@
 export const watchlist = [
-  // Previous 30 entries...
-
   { name: "TITAN", price: 3725.5, percent: "0.82%", isDown: false },
   { name: "TECHM", price: 1344.25, percent: "-0.34%", isDown: true },
   { name: "POWERGRID", price: 293.15, percent: "0.46%", isDown: false },

@@ -125,13 +125,16 @@ const BuyActionWindow = ({ uid, stockPrice }) => {
   // ✅ Handle Buy button
   const handleBuyClick = () => {
     axios
-      .post("http://localhost:3002/newOrders", {
+      .post(`${process.env.REACT_APP_API_URL}/newOrders`, {
         name: uid,
         qty: stockQuantity,
         price: price,
         mode: "BUY",
       })
-      .then((response) => console.log(response.data))
+      .then((response) => {
+        console.log(response.data);
+        window.location.reload();
+      })
       .catch((error) => console.error("Error:", error));
 
     handleClose(); // auto-close after buy
@@ -200,6 +203,7 @@ const BuyActionWindow = ({ uid, stockPrice }) => {
           <span>Margin required ₹{(stockQuantity * price).toFixed(2)}</span>
           <div className="btn-link">
             <Button
+              type="button"
               className="btn"
               variant="contained"
               color="success"
@@ -208,6 +212,7 @@ const BuyActionWindow = ({ uid, stockPrice }) => {
               Buy
             </Button>
             <Button
+              type="button"
               className="btn"
               variant="contained"
               onClick={handleCancelClick}

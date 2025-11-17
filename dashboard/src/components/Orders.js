@@ -6,9 +6,12 @@ import axios from "axios";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:3002/addOrders").then((res) => {
-      setOrders(res.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/addOrders`)
+
+      .then((res) => {
+        setOrders(res.data);
+      });
   }, []);
 
   return (

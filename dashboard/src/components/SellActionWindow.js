@@ -112,13 +112,17 @@ const SellActionWindow = ({ uid, stockPrice, stockQty = 1 }) => {
   // ✅ Handle Sell button
   const handleSellClick = async () => {
     try {
-      const res = await axios.post("http://localhost:3002/newOrders", {
-        name: uid,
-        qty: stockQuantity,
-        price: stockPrice,
-        mode: "SELL",
-      });
+      const res = await axios.post(
+        `${process.env.REACT_APP_API_URL}/newOrders`,
+        {
+          name: uid,
+          qty: stockQuantity,
+          price: stockPrice,
+          mode: "SELL",
+        }
+      );
       handleClose();
+      window.location.reload();
       // Optionally trigger a refresh of holdings/positions here
     } catch (err) {
       alert("Sell failed!");
