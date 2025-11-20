@@ -1,11 +1,12 @@
 const express = require("express");
 const { PositionsModel } = require("../model/PositionsModel");
+const verifyToken = require("../Middleware/AuthMiddleware");
 const router = express.Router();
 
-router.get("/addPositions", async (req, res) => {
+router.get("/addPositions", verifyToken, async (req, res) => {
   try {
-    // const userId = req.user._id;
-    const allPositions = await PositionsModel.find({});
+    const userId = req.user._id;
+    const allPositions = await PositionsModel.find({ userId });
     if (!allPositions) {
       return res
         .status(401)

@@ -1,9 +1,9 @@
 const express = require("express");
 const ListModel = require("../model/ListsModel");
-// const verifyToken = require("../Middleware/authMiddleware");
+const verifyToken = require("../Middleware/AuthMiddleware");
 const router = express.Router();
 
-router.get("/allLists", async (req, res) => {
+router.get("/allLists", verifyToken, async (req, res) => {
   try {
     const allList = await ListModel.find({});
     res.json(allList);

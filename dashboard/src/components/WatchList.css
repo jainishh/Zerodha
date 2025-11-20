@@ -10,10 +10,6 @@
   float: left;
 }
 
-/* .watchlist {
-  margin-left: 2px;
-} */
-
 .sidebarWatchlistContainer {
   width: 30%;
   font-family: Arial, sans-serif;
@@ -94,16 +90,6 @@
   align-items: center;
 }
 
-/* .itemDown,
-.arrowDown,
-.price {
-  color: #df514c;
-}
-.itemUp,
-.arraowUp,
-.price {
-  color: rgb(75, 174, 75);
-} */
 .itemDown,
 .arrowDown,
 .itemDown,
@@ -183,15 +169,3 @@ ul li:hover {
   padding: 5px;
   width: 3em;
 }
-
-/* @media (max-width: 1117px) {
-  .sidebarWatchlistContainer {
-    display: none;
-  }
-}
-
-@media (min-width: 1117px) {
-  .watchlistContainer {
-    display: none;
-  }
-} */

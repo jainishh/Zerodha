@@ -16,5 +16,3 @@ const HoldingsSchema = new Schema({
 });
 
 module.exports = { HoldingsSchema };
-
-// aa userID no khatlo karvano che

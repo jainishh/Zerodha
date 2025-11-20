@@ -108,7 +108,7 @@ const Menu = () => {
               className="dropdownItem"
               onClick={() => {
                 localStorage.clear();
-                window.location.href = `${process.env.REACT_APP_API_URL}/login`;
+                window.location.href = `${process.env.REACT_APP_FRONTEND_URL}`;
               }}
             >
               Logout

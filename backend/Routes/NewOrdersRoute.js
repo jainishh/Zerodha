@@ -2,13 +2,13 @@ const express = require("express");
 const { OrdersModel } = require("../model/OrdersModel");
 const { HoldingsModel } = require("../model/HoldingsModel");
 const { PositionsModel } = require("../model/PositionsModel");
+const verifyToken = require("../Middleware/AuthMiddleware");
 const router = express.Router();
-const mongoose = require("mongoose");
 
-router.post("/newOrders", async (req, res) => {
+router.post("/newOrders", verifyToken, async (req, res) => {
   try {
-    const { name, qty, price, mode } = req.body; // ✅ Extract body data
-    const userId = new mongoose.Types.ObjectId(); // Dummy userId for now
+    const { name, qty, price, mode } = req.body; //Extract body data
+    const userId = req.user._id;
 
     // Create and save new order
     const newOrders = new OrdersModel({
@@ -100,7 +100,7 @@ router.post("/newOrders", async (req, res) => {
       }
     }
 
-    // ✅ Only one response
+    // Only one response
     res.json({ message: "Order processed successfully" });
   } catch (error) {
     console.error("Error processing order:", error);

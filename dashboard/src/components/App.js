@@ -1,6 +1,5 @@
 import React from "react";
 import Allroutes from "./Allroutes";
-import Home from "./Home";
 
 const App = () => {
   return (

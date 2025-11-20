@@ -1,11 +1,12 @@
 const express = require("express");
 const { OrdersModel } = require("../model/OrdersModel");
+const verifyToken = require("../Middleware/AuthMiddleware");
 const router = express.Router();
 
-router.get("/addOrders", async (req, res) => {
+router.get("/addOrders", verifyToken, async (req, res) => {
   try {
-    // const userId = req.user._id;
-    const allOrders = await OrdersModel.find({});
+    const userId = req.user._id;
+    const allOrders = await OrdersModel.find({ userId });
     if (!allOrders) {
       return res
         .status(401)

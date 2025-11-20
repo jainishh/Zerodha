@@ -13,8 +13,17 @@ const Holdings = () => {
   });
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      console.error("No token found in localStorage");
+      return;
+    }
     axios
-      .get(`${process.env.REACT_APP_API_URL}/addHoldings`)
+      .get(`${process.env.REACT_APP_API_URL}/addHoldings`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
 
       .then((res) => {
         setAllHoldings(res.data);

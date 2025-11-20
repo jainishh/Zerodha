@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./Orders&Holdings&Posiions.css";
-import ordersData from "../data/data.js";
+// import ordersData from "../data/data.js";
 import axios from "axios";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
+    const token = localStorage.getItem("token");
+
     axios
-      .get(`${process.env.REACT_APP_API_URL}/addOrders`)
+      .get(`${process.env.REACT_APP_API_URL}/addOrders`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
 
       .then((res) => {
         setOrders(res.data);

@@ -1,23 +1,36 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
+import axios from "axios";
 import "./Dashboard.css";
 import Button from "@mui/material/Button";
 
 const Dashboard = () => {
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const token = params.get("token");
-    const name = params.get("name");
+  const [userData, setUserData] = useState(null);
 
-    if (token) {
-      localStorage.setItem("token", token);
-      localStorage.setItem("loggedInUser", name);
-    }
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/user`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((response) => {
+        setUserData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching summary:", error);
+        if (error.response) {
+          console.error("Server responded with:", error.response.status);
+        }
+      });
   }, []);
 
+  if (!userData) return <div>Loading user summary...</div>;
   return (
     <div className="DashboardContainer">
       <div className="header">
-        <h2>Jainish</h2>
+        <h2>{userData.name}</h2>
         <hr className="divider"></hr>
       </div>
 

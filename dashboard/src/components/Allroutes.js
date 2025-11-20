@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Home from "./Home";
@@ -7,9 +7,19 @@ import Orders from "./Orders";
 import Holdings from "./Holdings";
 import Positions from "./Positions";
 import WatchList from "./WatchList";
-import GeneralContext from "./GeneralContext";
 
 const Allroutes = () => {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token");
+    const name = params.get("name");
+
+    if (token) {
+      localStorage.setItem("token", token);
+      localStorage.setItem("loggedInUser", name);
+    }
+  }, []);
+
   return (
     <Routes>
       {/* Parent Layout */}

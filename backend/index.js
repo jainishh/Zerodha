@@ -4,27 +4,40 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
 const HoldingsRoute = require("./Routes/HoldingsRoute");
 const PositionRoute = require("./Routes/PositionsRoute");
 const OrdersRoute = require("./Routes/OrdersRoute");
 const NewOrdersRoute = require("./Routes/NewOrdersRoute");
 const ListsRoute = require("./Routes/ListsRoute");
-
-// const HoldingsModel = require("./model/HoldingsModel");
-// const PositionsModel = require("./model/PositionsModel");
-// const OrdersModel = require("./model/OrdersModel");
-// const ListsModel = require("./model/ListsModel");
+const AuthRouter = require("./Routes/AuthRoute");
+const UserRoute = require("./Routes/UserRoute");
 
 const app = express();
 const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 
 // ------------------ MIDDLEWARE -------------------
-app.use(cors());
 app.use(bodyParser.json());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:3001",
+      // "https://investo-frontend.onrender.com",
+      // "https://investo-dashboard.onrender.com",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+app.use(cookieParser());
+app.use(express.json());
 
 // ------------------ ROUTES -----------------------
+app.use("/api/auth", AuthRouter);
+app.use("/", UserRoute);
 
 // GET Holdings
 app.use("/", HoldingsRoute);
